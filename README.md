@@ -1,6 +1,6 @@
 # Moons classifier from scratch
 
-A small 2-layer neural network, built from scratch in PyTorch (no shortcuts), trained on the classic two-moons dataset from sklearn. This was also my first time working with the [make_moons dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html) itself, a synthetic dataset shaped like two interleaving crescents, specifically designed to not be separable by a straight line. What started as a simple exercise turned into a real debugging story, including a dying ReLU bug that took a bit of digging to figure out.
+A _small 2-layer neural network_, built from scratch in PyTorch (no shortcuts), trained on the classic two-moons dataset from sklearn. This was also my first time working with the [make_moons dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html) itself, a synthetic dataset shaped like two interleaving crescents, specifically designed to not be separable by a straight line. What started as a simple exercise turned into a real debugging story, including a dying ReLU bug that took a bit of digging to figure out.
 
 ## What's here
 
@@ -33,6 +33,9 @@ pip install -r requirements.txt
 python train.py
 python plot_boundary.py
 ```
+## Run the Notebook
+
+If you want to test this out on a notebook like Google Colab, then try moonsclassifier_notebook.ipynb.
 
 ## Project structure
 ```
