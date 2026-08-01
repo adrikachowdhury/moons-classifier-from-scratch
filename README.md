@@ -38,13 +38,14 @@ python plot_boundary.py
 ```
 moons-classifier-from-scratch/
 ├── README.md
-├── train.py          # your model + training loop
-├── plot_boundary.py  # the visualization code
-├── requirements.txt  # torch, numpy, scikit-learn, matplotlib
+├── train.py                         # the model + training loop
+├── plot_boundary.py                 # the visualization code
+├── requirements.txt                 # torch, numpy, scikit-learn, matplotlib
+├── moonsclassifier_notebook.ipynb   # notebook file of the whole implementation with necessary documentation inside
 └── plots/
-    ├── linear_boundary.png       # your first (broken) plot
-    ├── plateau_boundary.png      # the stuck-at-0.28 one
-    └── final_boundary.png        # the fixed, curved one
+    ├── Attempt1.png                 
+    ├── Attempt2.png                 
+    └── FinalAttempt.png             
 ```
 
 ## What I took away from this
