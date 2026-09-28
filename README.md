@@ -51,12 +51,21 @@ moons-classifier-from-scratch/
     └── FinalAttempt.png             
 ```
 
-## What I took away from this
+## Key learnings
+### Concepts
+- A neural net layer computes (weights × input) + bias, then applies an activation function
+- ReLU is what lets the network learn curves. Without it, stacked linear layers collapse into one straight line
+- Sigmoid + BCELoss are the standard pairing for binary classification
+- Training loop: forward pass → loss → zero_grad() → backward() → step() → repeat
+- A gradient is a slope: "how much does the loss change if I nudge this parameter?" Zero slope means no update
 
-- A network with too few hidden units is vulnerable to losing several neurons to dying ReLU, especially with unlucky initialization
-- A flat or stuck loss is a different problem from "just needs more training", worth checking model capacity, not just epoch count
-- Always visualize the decision boundary; the loss number alone doesn't tell you the full story
-
+### Debugging Lessons
+- A wrong-looking result has more than one possible cause. Attempt 1 (straight line) was undertraining. Attempt 2 (stuck loss) was a different problem, model capacity (dying ReLU)
+- A loss stuck completely flat is a different symptom from a loss that is still slowly falling. Flat means "stuck", not "needs more time"
+- Loss numbers alone don't tell the full story. Plotting the decision boundary showed what the model actually learned
+- Widening the layer (8 → 32) worked as redundancy: even if some neurons die, enough live ones remain
+- Form a hypothesis, test it with one change, and check the result
+  
 ## Acknowledgement
 
 Built while working through concepts with Claude (Anthropic), who walked me through the debugging process step by step.
